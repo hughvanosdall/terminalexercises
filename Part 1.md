@@ -1,33 +1,33 @@
 Part 1
-mkdir first
-cd first
-touch person.txt
-mv person.txt another.txt
-cp another.txt copy.txt
-rm copy.txt
-cp -r first second
-rm -rf second
 
-Part 2
-The man command lists the manual for a command
-- D or Control ⌃-D to advance half a page - B or Control ⌃-B to go back one page - U or Control ⌃-U to go back half a page
+mkdir learn_git_again
 
-The `-l` flag lists files in a list format with more detail and the `-a` lists all files and folders including hidden ones
+cd learn_git_again
 
-option left/right
+touch third.txt
 
-control + e
+git init
 
-control + a
+git add third.txt
 
-option + delete
+git commit -m “adding third.txt”
 
-The terminal is a program is just an interface to the shell. The shell is what actually handles commands and so forth; the terminal program just gives it a way to interact with the environment.
+git log
 
-An absolute path is a path that starts from the root route and gives the complete location for a file or folder
+touch fourth.txt
 
-A relative path is a path that starts at the current location and not the root route
+git add fourth.txt
 
-A flag adds additional functionality to an existing command, we have seen -a and -l for the ls command and -r for the cp and rm commands
+git commit -m “adding fourth.txt”
 
-r will remove folders and recursively go through each folder and file and f will force removal
+rm third.txt
+
+git add third.txt
+
+git commit -m “removing third.txt”
+
+git log
+
+git config --global core.pager “cat”
+
+git config --global --list
